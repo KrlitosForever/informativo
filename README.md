@@ -1,0 +1,2 @@
+# informativo
+Página informativa temporal
