@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Eventos</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Secciones */
+        .seccion {
+            margin: 3rem 0;
+        }
+
+        .seccion-titulo {
+            color: #6e48aa;
+            border-bottom: 3px solid #9d50bb;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        /* Tarjetas de eventos */
+        .eventos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .evento {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .evento:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fecha {
+            background: linear-gradient(135deg, #4776E6 0%, #8E54E9 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            order: -1;
+        }
+        
+        .lugar {
+            padding: 1.5rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .evento-imagen .lugar {
+            padding: 0;
+        }
+
+        .evento-imagen img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid #9d50bb;
+        }
+        
+        .lugar h3 {
+            color: #6e48aa;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .lugar p {
+            color: #666;
+            font-size: 1.1rem;
+            padding: 0 1rem 1rem;
+        }
+        
+        .icono {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #9d50bb;
+        }
+        
+        /* Pie de página */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .eventos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Agenda de Eventos</h1>
+            <p class="subtitle">Próximas ubicaciones y fechas del Bus de la Justicia</p>
+            <p class="subtitle">Evento gratuito</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Sección Salud -->
+        <div class="seccion">
+            <h2 class="seccion-titulo">Salud</h2>
+            <div class="eventos">
+                <div class="evento evento-imagen">
+                    <div class="fecha">27 de Mayo</div>
+                    <div class="lugar">
+                        <a href="/prueba/prueba2.html" ><img src="https://picsum.photos/800/600" alt="Salud"></a>
+                        <!-- <img src="https://picsum.photos/800/600" alt="Salud"> -->
+                        <h3>Plaza de Vallenar</h3>
+                        <p>Campamento de salud preventiva</p>
+                    </div>
+                </div>
+                
+                <div class="evento">
+                    <div class="fecha">28 de Mayo</div>
+                    <div class="lugar">
+                        <div class="icono">
+                            <i class="fas fa-clinic-medical"></i>
+                        </div>
+                        <h3>Consultorio Paipote</h3>
+                        <p>Chequeos médicos gratuitos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Deporte -->
+        <div class="seccion">
+            <h2 class="seccion-titulo">Deporte</h2>
+            <div class="eventos">
+                <div class="evento evento-imagen">
+                    <div class="fecha">29 de Mayo</div>
+                    <div class="lugar">
+                        <img src="https://picsum.photos/800/600" alt="Deporte">
+                        <h3>Estadio Regional</h3>
+                        <p>Torneo de fútbol comunitario</p>
+                    </div>
+                </div>
+                
+                <div class="evento">
+                    <div class="fecha">30 de Mayo</div>
+                    <div class="lugar">
+                        <div class="icono">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                        <h3>Gimnasio Municipal</h3>
+                        <p>Clases de zumba gratuitas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Cultural -->
+        <div class="seccion">
+            <h2 class="seccion-titulo">Cultural</h2>
+            <div class="eventos">
+                <div class="evento evento-imagen">
+                    <div class="fecha">31 de Mayo</div>
+                    <div class="lugar">
+                        <img src="https://picsum.photos/800/600" alt="Cultural">
+                        <h3>Teatro Municipal</h3>
+                        <p>Obra de teatro "La justicia en escena"</p>
+                    </div>
+                </div>
+                
+                <div class="evento">
+                    <div class="fecha">1 de Junio</div>
+                    <div class="lugar">
+                        <div class="icono">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Centro Cultural</h3>
+                        <p>Taller de arte para niños</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Agenda de Eventos. Todos los derechos reservados.</p>
+            <p>Quieres publicar tu evento envía un correo a <a href="mailto:contacto@cd1dil.com">contacto@cd1dil.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
